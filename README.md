@@ -13,7 +13,7 @@
 - Export **cross-platform** conda environment if packages changed with `conda env export --from-history>transfetch-env.yml`
 
 ### Notes
-- Hard coded dimension or `DIM` parameterof ResNet as 64, ResNet_tiny as 4
+- Hard coded dimension or `DIM` parameter for ResNet as 64, ResNet_tiny as 4
 
 ### Potential Bugs
 - Early stop is 10 for both the training of teacher and student
