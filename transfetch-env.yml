@@ -1,0 +1,16 @@
+name: transfetch-env
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - pytorch-cuda=11.8
+  - pytorch
+  - torchvision
+  - torchaudio
+  - einops
+  - pandas
+  - tqdm
+  - scikit-learn
+  - torchinfo
+  - ipykernel
+prefix: /home/neel/anaconda3/envs/transfetch-env

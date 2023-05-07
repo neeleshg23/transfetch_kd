@@ -1,0 +1,194 @@
+2023-05-07 15:58:47,186:INFO: /home/neel/Desktop/LoadTraces/spec06/473.astar-s0.txt.xz
+2023-05-07 15:58:47,197:INFO: ===========================================================================
+Layer (type:depth-idx)                             Param #
+===========================================================================
+TMAP                                               3,072
+├─Sequential: 1-1                                  --
+│    └─Rearrange: 2-1                              --
+│    └─Linear: 2-2                                 2,816
+├─Dropout: 1-2                                     --
+├─Transformer: 1-3                                 --
+│    └─ModuleList: 2-3                             --
+│    │    └─ModuleList: 3-1                        788,224
+│    │    └─ModuleList: 3-2                        788,224
+│    │    └─ModuleList: 3-3                        788,224
+│    │    └─ModuleList: 3-4                        788,224
+│    │    └─ModuleList: 3-5                        788,224
+│    │    └─ModuleList: 3-6                        788,224
+│    │    └─ModuleList: 3-7                        788,224
+│    │    └─ModuleList: 3-8                        788,224
+├─Identity: 1-4                                    --
+├─Sequential: 1-5                                  --
+│    └─LayerNorm: 2-4                              512
+│    └─Linear: 2-5                                 65,792
+├─Sigmoid: 1-6                                     --
+===========================================================================
+Total params: 6,377,984
+Trainable params: 6,377,984
+Non-trainable params: 0
+===========================================================================
+2023-05-07 16:00:02,273:INFO: -------------Data Proccessed------------
+2023-05-07 16:00:07,545:INFO: Epoch: 1 - loss: 0.2348772731 - test_loss: 0.1743952374
+2023-05-07 16:00:07,573:INFO: -------- Save Best Model! --------
+2023-05-07 16:00:12,550:INFO: Epoch: 2 - loss: 0.1403609472 - test_loss: 0.1689968220
+2023-05-07 16:00:12,595:INFO: -------- Save Best Model! --------
+2023-05-07 16:00:17,541:INFO: Epoch: 3 - loss: 0.1258606813 - test_loss: 0.1603737437
+2023-05-07 16:00:17,588:INFO: -------- Save Best Model! --------
+2023-05-07 16:00:22,547:INFO: Epoch: 4 - loss: 0.1154215727 - test_loss: 0.1558383400
+2023-05-07 16:00:22,591:INFO: -------- Save Best Model! --------
+2023-05-07 16:00:27,476:INFO: Epoch: 5 - loss: 0.1066598501 - test_loss: 0.1554709277
+2023-05-07 16:00:27,522:INFO: -------- Save Best Model! --------
+2023-05-07 16:00:32,482:INFO: Epoch: 6 - loss: 0.1013600754 - test_loss: 0.1512348810
+2023-05-07 16:00:32,540:INFO: -------- Save Best Model! --------
+2023-05-07 16:00:37,489:INFO: Epoch: 7 - loss: 0.0990657719 - test_loss: 0.1428023428
+2023-05-07 16:00:37,535:INFO: -------- Save Best Model! --------
+2023-05-07 16:00:42,514:INFO: Epoch: 8 - loss: 0.0977266607 - test_loss: 0.1457181858
+2023-05-07 16:00:42,514:INFO: Early Stop Left: 9
+2023-05-07 16:00:47,453:INFO: Epoch: 9 - loss: 0.0960074141 - test_loss: 0.1499365252
+2023-05-07 16:00:47,453:INFO: Early Stop Left: 8
+2023-05-07 16:00:52,610:INFO: Epoch: 10 - loss: 0.0940163903 - test_loss: 0.1521139717
+2023-05-07 16:00:52,610:INFO: Early Stop Left: 7
+2023-05-07 16:00:57,701:INFO: Epoch: 11 - loss: 0.0935353758 - test_loss: 0.1617646763
+2023-05-07 16:00:57,701:INFO: Early Stop Left: 6
+2023-05-07 16:01:02,770:INFO: Epoch: 12 - loss: 0.0944958754 - test_loss: 0.1554178608
+2023-05-07 16:01:02,770:INFO: Early Stop Left: 5
+2023-05-07 16:01:07,701:INFO: Epoch: 13 - loss: 0.0908355805 - test_loss: 0.1530579781
+2023-05-07 16:01:07,701:INFO: Early Stop Left: 4
+2023-05-07 16:01:12,689:INFO: Epoch: 14 - loss: 0.0889993758 - test_loss: 0.1524576205
+2023-05-07 16:01:12,689:INFO: Early Stop Left: 3
+2023-05-07 16:01:17,643:INFO: Epoch: 15 - loss: 0.0870730857 - test_loss: 0.1612280987
+2023-05-07 16:01:17,643:INFO: Early Stop Left: 2
+2023-05-07 16:01:22,695:INFO: Epoch: 16 - loss: 0.0851183013 - test_loss: 0.1695952523
+2023-05-07 16:01:22,695:INFO: Early Stop Left: 1
+2023-05-07 16:01:27,668:INFO: Epoch: 17 - loss: 0.0847703413 - test_loss: 0.1530225290
+2023-05-07 16:01:27,668:INFO: Early Stop Left: 0
+2023-05-07 16:01:27,668:INFO: -------- Early Stop! --------
+2023-05-07 16:08:46,039:INFO: /home/neel/Desktop/LoadTraces/spec06/473.astar-s0.txt.xz
+2023-05-07 16:08:46,049:INFO: ===========================================================================
+Layer (type:depth-idx)                             Param #
+===========================================================================
+TMAP                                               3,072
+├─Sequential: 1-1                                  --
+│    └─Rearrange: 2-1                              --
+│    └─Linear: 2-2                                 2,816
+├─Dropout: 1-2                                     --
+├─Transformer: 1-3                                 --
+│    └─ModuleList: 2-3                             --
+│    │    └─ModuleList: 3-1                        788,224
+│    │    └─ModuleList: 3-2                        788,224
+│    │    └─ModuleList: 3-3                        788,224
+│    │    └─ModuleList: 3-4                        788,224
+│    │    └─ModuleList: 3-5                        788,224
+│    │    └─ModuleList: 3-6                        788,224
+│    │    └─ModuleList: 3-7                        788,224
+│    │    └─ModuleList: 3-8                        788,224
+├─Identity: 1-4                                    --
+├─Sequential: 1-5                                  --
+│    └─LayerNorm: 2-4                              512
+│    └─Linear: 2-5                                 65,792
+├─Sigmoid: 1-6                                     --
+===========================================================================
+Total params: 6,377,984
+Trainable params: 6,377,984
+Non-trainable params: 0
+===========================================================================
+2023-05-07 16:13:23,007:INFO: /home/neel/Desktop/LoadTraces/spec06/473.astar-s0.txt.xz
+2023-05-07 16:13:23,017:INFO: ===========================================================================
+Layer (type:depth-idx)                             Param #
+===========================================================================
+TMAP                                               3,072
+├─Sequential: 1-1                                  --
+│    └─Rearrange: 2-1                              --
+│    └─Linear: 2-2                                 2,816
+├─Dropout: 1-2                                     --
+├─Transformer: 1-3                                 --
+│    └─ModuleList: 2-3                             --
+│    │    └─ModuleList: 3-1                        2,754,304
+│    │    └─ModuleList: 3-2                        2,754,304
+│    │    └─ModuleList: 3-3                        2,754,304
+│    │    └─ModuleList: 3-4                        2,754,304
+│    │    └─ModuleList: 3-5                        2,754,304
+│    │    └─ModuleList: 3-6                        2,754,304
+│    │    └─ModuleList: 3-7                        2,754,304
+│    │    └─ModuleList: 3-8                        2,754,304
+├─Identity: 1-4                                    --
+├─Sequential: 1-5                                  --
+│    └─LayerNorm: 2-4                              512
+│    └─Linear: 2-5                                 65,792
+├─Sigmoid: 1-6                                     --
+===========================================================================
+Total params: 22,106,624
+Trainable params: 22,106,624
+Non-trainable params: 0
+===========================================================================
+2023-05-07 16:14:24,806:INFO: /home/neel/Desktop/LoadTraces/spec06/473.astar-s0.txt.xz
+2023-05-07 16:14:24,817:INFO: ===========================================================================
+Layer (type:depth-idx)                             Param #
+===========================================================================
+TMAP                                               3,072
+├─Sequential: 1-1                                  --
+│    └─Rearrange: 2-1                              --
+│    └─Linear: 2-2                                 2,816
+├─Dropout: 1-2                                     --
+├─Transformer: 1-3                                 --
+│    └─ModuleList: 2-3                             --
+│    │    └─ModuleList: 3-1                        2,754,304
+│    │    └─ModuleList: 3-2                        2,754,304
+│    │    └─ModuleList: 3-3                        2,754,304
+│    │    └─ModuleList: 3-4                        2,754,304
+│    │    └─ModuleList: 3-5                        2,754,304
+│    │    └─ModuleList: 3-6                        2,754,304
+│    │    └─ModuleList: 3-7                        2,754,304
+│    │    └─ModuleList: 3-8                        2,754,304
+├─Identity: 1-4                                    --
+├─Sequential: 1-5                                  --
+│    └─LayerNorm: 2-4                              512
+│    └─Linear: 2-5                                 65,792
+├─Sigmoid: 1-6                                     --
+===========================================================================
+Total params: 22,106,624
+Trainable params: 22,106,624
+Non-trainable params: 0
+===========================================================================
+2023-05-07 16:15:39,542:INFO: -------------Data Proccessed------------
+2023-05-07 16:15:52,989:INFO: Epoch: 1 - loss: 0.2316124991 - test_loss: 0.1748551514
+2023-05-07 16:15:53,129:INFO: -------- Save Best Model! --------
+2023-05-07 16:16:06,328:INFO: Epoch: 2 - loss: 0.1422475293 - test_loss: 0.1723098573
+2023-05-07 16:16:06,478:INFO: -------- Save Best Model! --------
+2023-05-07 16:16:20,112:INFO: Epoch: 3 - loss: 0.1341665336 - test_loss: 0.1734919446
+2023-05-07 16:16:20,112:INFO: Early Stop Left: 9
+2023-05-07 16:16:33,609:INFO: Epoch: 4 - loss: 0.1250370068 - test_loss: 0.1656538130
+2023-05-07 16:16:33,760:INFO: -------- Save Best Model! --------
+2023-05-07 16:16:47,067:INFO: Epoch: 5 - loss: 0.1158142545 - test_loss: 0.1576485850
+2023-05-07 16:16:47,210:INFO: -------- Save Best Model! --------
+2023-05-07 16:17:00,819:INFO: Epoch: 6 - loss: 0.1114912899 - test_loss: 0.1578235306
+2023-05-07 16:17:00,819:INFO: Early Stop Left: 9
+2023-05-07 16:17:14,640:INFO: Epoch: 7 - loss: 0.1047430238 - test_loss: 0.1496509570
+2023-05-07 16:17:14,776:INFO: -------- Save Best Model! --------
+2023-05-07 16:17:28,100:INFO: Epoch: 8 - loss: 0.1032137764 - test_loss: 0.1476914594
+2023-05-07 16:17:28,251:INFO: -------- Save Best Model! --------
+2023-05-07 16:17:41,579:INFO: Epoch: 9 - loss: 0.1017078056 - test_loss: 0.1519126987
+2023-05-07 16:17:41,579:INFO: Early Stop Left: 9
+2023-05-07 16:17:55,243:INFO: Epoch: 10 - loss: 0.1001347127 - test_loss: 0.1457989270
+2023-05-07 16:17:55,401:INFO: -------- Save Best Model! --------
+2023-05-07 16:18:09,041:INFO: Epoch: 11 - loss: 0.0999342233 - test_loss: 0.1552990397
+2023-05-07 16:18:09,041:INFO: Early Stop Left: 9
+2023-05-07 16:18:22,288:INFO: Epoch: 12 - loss: 0.0981280525 - test_loss: 0.1626503011
+2023-05-07 16:18:22,288:INFO: Early Stop Left: 8
+2023-05-07 16:18:35,521:INFO: Epoch: 13 - loss: 0.0955355644 - test_loss: 0.1546729669
+2023-05-07 16:18:35,521:INFO: Early Stop Left: 7
+2023-05-07 16:18:48,764:INFO: Epoch: 14 - loss: 0.0948640020 - test_loss: 0.1496073845
+2023-05-07 16:18:48,764:INFO: Early Stop Left: 6
+2023-05-07 16:19:02,022:INFO: Epoch: 15 - loss: 0.0934940675 - test_loss: 0.1614197842
+2023-05-07 16:19:02,023:INFO: Early Stop Left: 5
+2023-05-07 16:19:15,295:INFO: Epoch: 16 - loss: 0.0926073587 - test_loss: 0.1486511652
+2023-05-07 16:19:15,295:INFO: Early Stop Left: 4
+2023-05-07 16:19:28,602:INFO: Epoch: 17 - loss: 0.0924237983 - test_loss: 0.1544082281
+2023-05-07 16:19:28,602:INFO: Early Stop Left: 3
+2023-05-07 16:19:41,884:INFO: Epoch: 18 - loss: 0.0921942555 - test_loss: 0.1576765797
+2023-05-07 16:19:41,884:INFO: Early Stop Left: 2
+2023-05-07 16:19:55,180:INFO: Epoch: 19 - loss: 0.0913426302 - test_loss: 0.1563939185
+2023-05-07 16:19:55,181:INFO: Early Stop Left: 1
+2023-05-07 16:20:08,488:INFO: Epoch: 20 - loss: 0.0895717894 - test_loss: 0.1610509422
+2023-05-07 16:20:08,489:INFO: Early Stop Left: 0
+2023-05-07 16:20:08,489:INFO: -------- Early Stop! --------
