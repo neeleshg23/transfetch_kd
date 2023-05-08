@@ -48,7 +48,7 @@ for app1 in ${app_list[*]}; do
     stu_model_path=$OUTPUT_ROOT/$VERSION_STU/train/${app1}.model.pth
 	#app2=${app1%%.txt*}.trace.xz
 
-    #python train_tch.py $MODEL $file_path $tch_model_path $TRAIN_WARM $TRAIN_TOTAL $SKIP
+    python train_tch.py $MODEL $file_path $tch_model_path $TRAIN_WARM $TRAIN_TOTAL $SKIP
     python train_stu.py $MODEL $file_path $tch_model_path $stu_model_path $TRAIN_WARM $TRAIN_TOTAL $SKIP
 
 	echo "done for app "$app1

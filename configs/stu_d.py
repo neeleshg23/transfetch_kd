@@ -17,7 +17,7 @@ num_classes=2*DELTA_BOUND
 #%% Filter configuration
 Degree=16
 FILTER_SIZE=16
-#%% ResNet Teacher Model w/ 19M trainable params
+#%% ResNet Teacher Model w/ 24M trainable params
 dim=256
 depth=6
 heads=8
