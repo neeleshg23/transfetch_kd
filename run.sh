@@ -5,7 +5,7 @@ OUTPUT_ROOT="/home/neel/Desktop/transfetch_kd/res"
 VERSION="vit"
 MODEL="v"
 
-NUM_TCH=1
+NUM_TCH=2
 
 export GPU_ID=0
 export BATCH_SIZE=256
@@ -25,10 +25,10 @@ SKIP=1
 app_list=(473.astar-s0.txt.xz)
 
 TRAIN_WARM=$TRAIN
-TRAIN_TOTAL=$(($TRAIN + $VAL)) 
+TRAIN_TOTAL=$(($TRAIN + $VAL))
 
 TEST_WARM=$TRAIN_WARM
-TEST_TOTAL=$(($TRAIN+$TEST)) 
+TEST_TOTAL=$(($TRAIN+$TEST))
 
 echo "TRAIN/VAL/TEST/SKIP: "$TRAIN"/"$VAL"/"$TEST"/"$SKIP
 
@@ -41,39 +41,37 @@ mkdir -p $OUTPUT_ROOT/$VERSION_STU/train
 for app1 in ${app_list[*]}; do
     echo $app1
     file_path=$LoadTrace_ROOT/${app1}
-    
-    # If NUM_TCH equals 1, then train on the entire trace file.
-    if [ $NUM_TCH -eq 1 ]; then
-        tch_model_path=$OUTPUT_ROOT/$VERSION_TCH/train/${app1}_1_of_1.model.pth
-        python train_tch.py $MODEL $file_path $tch_model_path $TRAIN_WARM $TRAIN_TOTAL $SKIP
-        continue
-    fi
 
     # Decompress the .txt.xz file
     xz -d -k $file_path
 
-    # Remove the .txt.xz extension to get the base file name
     base_filename=${app1%.txt.xz}
     decompressed_file_path=$LoadTrace_ROOT/$base_filename.txt
 
     # Split the decompressed file into NUM_TCH parts
     lines=$(wc -l <$decompressed_file_path)
     lines_per_part=$((lines / NUM_TCH))
-    split -l $lines_per_part $decompressed_file_path ${base_filename}_part_
-    
-    # Train a teacher model on each part of the trace file
+    split -l $lines_per_part --numeric-suffixes $decompressed_file_path ${LoadTrace_ROOT}/${base_filename}_part_ --additional-suffix=.txt
+
+    # Split the trace file into NUM_TCH parts and train teacher models on each part
     for part in $(seq 1 $NUM_TCH); do
-        part_file_path=$LoadTrace_ROOT/${base_filename}_part_$(printf "%02d" $((part-1)))
+        split_file_path="${LoadTrace_ROOT}/${base_filename}_part_$(printf "%02d" $((part - 1))).txt"
+        split_file_compressed="${split_file_path}.xz"
+        xz -k -f $split_file_path
+
         tch_model_path=$OUTPUT_ROOT/$VERSION_TCH/train/${base_filename}_$(printf "%02d" $part)_of_$(printf "%02d" $NUM_TCH).model.pth
-        python train_tch.py $MODEL $part_file_path $tch_model_path $TRAIN_WARM $TRAIN_TOTAL $SKIP
+        python train_tch.py $MODEL $split_file_compressed $tch_model_path $TRAIN_WARM $TRAIN_TOTAL $SKIP
+
+        # Remove the compressed part file after training
+        rm $split_file_compressed
     done
 
     # Remove the decompressed file and the parts
     rm $decompressed_file_path
     rm ${LoadTrace_ROOT}/${base_filename}_part_*
 
-    stu_model_path=$OUTPUT_ROOT/$VERSION_STU/train/${app1}.model.pth
-    python train_stu.py $MODEL $file_path $tch_model_path $stu_model_path $TRAIN_WARM $TRAIN_TOTAL $SKIP
+    # stu_model_path=$OUTPUT_ROOT/$VERSION_STU/train/${app1}.model.pth
+    # python train_stu.py $MODEL $file_path $tch_model_path $stu_model_path $TRAIN_WARM $TRAIN_TOTAL $SKIP
 
     echo "done for app "$app1
 done

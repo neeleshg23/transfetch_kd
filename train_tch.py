@@ -89,6 +89,7 @@ def run_epoch(epochs, loading, model_save_path, train_loader, test_loader, lr):
             break
 
 if __name__ == "__main__":
+    print(sys.argv)
     option = sys.argv[1]
 
     if option == "d":
