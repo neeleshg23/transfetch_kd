@@ -126,13 +126,12 @@ if __name__ == "__main__":
     optimizer = optim.Adam(model.parameters(), lr=lr)
     scheduler = StepLR(optimizer, step_size=step_size, gamma=gamma)
     
-    num_tch = int(sys.argv[2])
-    file_path = sys.argv[3]
-    tch_model_save_path = sys.argv[4]
-    model_save_path = sys.argv[5]
-    TRAIN_NUM = int(sys.argv[6])
-    TOTAL_NUM = int(sys.argv[7])
-    SKIP_NUM = int(sys.argv[8])
+    file_path = sys.argv[2]
+    tch_model_save_path = sys.argv[3]
+    model_save_path = sys.argv[4]
+    TRAIN_NUM = int(sys.argv[5])
+    TOTAL_NUM = int(sys.argv[6])
+    SKIP_NUM = int(sys.argv[7])
 
     loading=False
     log_path=model_save_path+".log"

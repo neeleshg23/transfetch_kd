@@ -89,7 +89,6 @@ def run_epoch(epochs, loading, model_save_path, train_loader, test_loader, lr):
             break
 
 if __name__ == "__main__":
-    print(sys.argv)
     option = sys.argv[1]
 
     if option == "d":
@@ -117,9 +116,6 @@ if __name__ == "__main__":
     log.logger.info(summary(model))
     
     train_loader, test_loader, test_df = data_generator(file_path,TRAIN_NUM,TOTAL_NUM,SKIP_NUM)
-    print(train_loader.shape)
-    print(test_loader.shape)
-    print(test_df.shape)
     log.logger.info("-------------Data Proccessed------------")
     run_epoch(epochs, loading, model_save_path, train_loader, test_loader, lr=cf.lr)
     set_model(f"tch_{option}")

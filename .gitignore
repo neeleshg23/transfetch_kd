@@ -1,3 +1,2 @@
-res/
 # Ensuring models do not get uploaded to github
 *.pth

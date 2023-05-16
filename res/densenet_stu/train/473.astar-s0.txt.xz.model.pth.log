@@ -1,0 +1,136 @@
+2023-05-07 15:49:14,444:INFO: /home/neel/Desktop/LoadTraces/spec06/473.astar-s0.txt.xz
+2023-05-07 15:49:14,447:INFO: =================================================================
+Layer (type:depth-idx)                   Param #
+=================================================================
+DenseNet                                 --
+├─Conv2d: 1-1                            72
+├─Sequential: 1-2                        --
+│    └─Bottleneck: 2-1                   --
+│    │    └─BatchNorm2d: 3-1             16
+│    │    └─Conv2d: 3-2                  128
+│    │    └─BatchNorm2d: 3-3             32
+│    │    └─Conv2d: 3-4                  576
+├─Transition: 1-3                        --
+│    └─BatchNorm2d: 2-2                  24
+│    └─Conv2d: 2-3                       72
+├─Sequential: 1-4                        --
+│    └─Bottleneck: 2-4                   --
+│    │    └─BatchNorm2d: 3-5             12
+│    │    └─Conv2d: 3-6                  96
+│    │    └─BatchNorm2d: 3-7             32
+│    │    └─Conv2d: 3-8                  576
+│    └─Bottleneck: 2-5                   --
+│    │    └─BatchNorm2d: 3-9             20
+│    │    └─Conv2d: 3-10                 160
+│    │    └─BatchNorm2d: 3-11            32
+│    │    └─Conv2d: 3-12                 576
+├─Transition: 1-5                        --
+│    └─BatchNorm2d: 2-6                  28
+│    └─Conv2d: 2-7                       98
+├─Sequential: 1-6                        --
+│    └─Bottleneck: 2-8                   --
+│    │    └─BatchNorm2d: 3-13            14
+│    │    └─Conv2d: 3-14                 112
+│    │    └─BatchNorm2d: 3-15            32
+│    │    └─Conv2d: 3-16                 576
+│    └─Bottleneck: 2-9                   --
+│    │    └─BatchNorm2d: 3-17            22
+│    │    └─Conv2d: 3-18                 176
+│    │    └─BatchNorm2d: 3-19            32
+│    │    └─Conv2d: 3-20                 576
+├─Transition: 1-7                        --
+│    └─BatchNorm2d: 2-10                 30
+│    └─Conv2d: 2-11                      105
+├─Sequential: 1-8                        --
+│    └─Bottleneck: 2-12                  --
+│    │    └─BatchNorm2d: 3-21            14
+│    │    └─Conv2d: 3-22                 112
+│    │    └─BatchNorm2d: 3-23            32
+│    │    └─Conv2d: 3-24                 576
+│    └─Bottleneck: 2-13                  --
+│    │    └─BatchNorm2d: 3-25            22
+│    │    └─Conv2d: 3-26                 176
+│    │    └─BatchNorm2d: 3-27            32
+│    │    └─Conv2d: 3-28                 576
+├─BatchNorm2d: 1-9                       30
+├─AdaptiveAvgPool2d: 1-10                --
+├─Linear: 1-11                           4,096
+├─Sigmoid: 1-12                          --
+=================================================================
+Total params: 9,891
+Trainable params: 9,891
+Non-trainable params: 0
+=================================================================
+2023-05-07 15:50:28,851:INFO: -------------Data Proccessed------------
+2023-05-07 15:50:29,009:INFO: -------------Teacher Model Loaded------------
+2023-05-07 15:50:38,370:INFO: Epoch: 1 - loss: 0.3067402985 - test_loss: 0.6635947242
+2023-05-07 15:50:38,375:INFO: -------- Save Best Model! --------
+2023-05-07 15:50:46,750:INFO: Epoch: 2 - loss: 0.2700348142 - test_loss: 0.5917335356
+2023-05-07 15:50:46,755:INFO: -------- Save Best Model! --------
+2023-05-07 15:50:55,186:INFO: Epoch: 3 - loss: 0.2309347526 - test_loss: 0.5137245154
+2023-05-07 15:50:55,191:INFO: -------- Save Best Model! --------
+2023-05-07 15:51:03,655:INFO: Epoch: 4 - loss: 0.1927170504 - test_loss: 0.4435236985
+2023-05-07 15:51:03,660:INFO: -------- Save Best Model! --------
+2023-05-07 15:51:12,125:INFO: Epoch: 5 - loss: 0.1603139210 - test_loss: 0.3861683026
+2023-05-07 15:51:12,130:INFO: -------- Save Best Model! --------
+2023-05-07 15:51:20,554:INFO: Epoch: 6 - loss: 0.1336678337 - test_loss: 0.3378824388
+2023-05-07 15:51:20,559:INFO: -------- Save Best Model! --------
+2023-05-07 15:51:29,153:INFO: Epoch: 7 - loss: 0.1122327680 - test_loss: 0.2995926941
+2023-05-07 15:51:29,158:INFO: -------- Save Best Model! --------
+2023-05-07 15:51:37,639:INFO: Epoch: 8 - loss: 0.0952802172 - test_loss: 0.2715223664
+2023-05-07 15:51:37,645:INFO: -------- Save Best Model! --------
+2023-05-07 15:51:46,224:INFO: Epoch: 9 - loss: 0.0819365238 - test_loss: 0.2495384976
+2023-05-07 15:51:46,229:INFO: -------- Save Best Model! --------
+2023-05-07 15:51:54,980:INFO: Epoch: 10 - loss: 0.0716025157 - test_loss: 0.2318778590
+2023-05-07 15:51:54,986:INFO: -------- Save Best Model! --------
+2023-05-07 15:52:03,409:INFO: Epoch: 11 - loss: 0.0635034508 - test_loss: 0.2175040365
+2023-05-07 15:52:03,414:INFO: -------- Save Best Model! --------
+2023-05-07 15:52:11,831:INFO: Epoch: 12 - loss: 0.0572608740 - test_loss: 0.2079873514
+2023-05-07 15:52:11,836:INFO: -------- Save Best Model! --------
+2023-05-07 15:52:20,256:INFO: Epoch: 13 - loss: 0.0523318442 - test_loss: 0.2001214998
+2023-05-07 15:52:20,262:INFO: -------- Save Best Model! --------
+2023-05-07 15:52:28,672:INFO: Epoch: 14 - loss: 0.0484599903 - test_loss: 0.1936791735
+2023-05-07 15:52:28,677:INFO: -------- Save Best Model! --------
+2023-05-07 15:52:37,129:INFO: Epoch: 15 - loss: 0.0454176846 - test_loss: 0.1892532833
+2023-05-07 15:52:37,135:INFO: -------- Save Best Model! --------
+2023-05-07 15:52:45,739:INFO: Epoch: 16 - loss: 0.0429700205 - test_loss: 0.1853956311
+2023-05-07 15:52:45,744:INFO: -------- Save Best Model! --------
+2023-05-07 15:52:54,287:INFO: Epoch: 17 - loss: 0.0410143262 - test_loss: 0.1826551222
+2023-05-07 15:52:54,292:INFO: -------- Save Best Model! --------
+2023-05-07 15:53:02,730:INFO: Epoch: 18 - loss: 0.0394441941 - test_loss: 0.1805376758
+2023-05-07 15:53:02,735:INFO: -------- Save Best Model! --------
+2023-05-07 15:53:11,161:INFO: Epoch: 19 - loss: 0.0381910978 - test_loss: 0.1790125595
+2023-05-07 15:53:11,167:INFO: -------- Save Best Model! --------
+2023-05-07 15:53:19,684:INFO: Epoch: 20 - loss: 0.0371151331 - test_loss: 0.1782300076
+2023-05-07 15:53:19,689:INFO: -------- Save Best Model! --------
+2023-05-07 15:53:28,702:INFO: Epoch: 21 - loss: 0.0362312495 - test_loss: 0.1766871897
+2023-05-07 15:53:28,707:INFO: -------- Save Best Model! --------
+2023-05-07 15:53:37,156:INFO: Epoch: 22 - loss: 0.0354338547 - test_loss: 0.1760892492
+2023-05-07 15:53:37,161:INFO: -------- Save Best Model! --------
+2023-05-07 15:53:45,659:INFO: Epoch: 23 - loss: 0.0346002313 - test_loss: 0.1752978211
+2023-05-07 15:53:45,664:INFO: -------- Save Best Model! --------
+2023-05-07 15:53:54,256:INFO: Epoch: 24 - loss: 0.0335876562 - test_loss: 0.1740599304
+2023-05-07 15:53:54,262:INFO: -------- Save Best Model! --------
+2023-05-07 15:54:02,739:INFO: Epoch: 25 - loss: 0.0320145397 - test_loss: 0.1739298243
+2023-05-07 15:54:02,744:INFO: -------- Save Best Model! --------
+2023-05-07 15:54:11,287:INFO: Epoch: 26 - loss: 0.0297092209 - test_loss: 0.1774844609
+2023-05-07 15:54:11,287:INFO: Early Stop Left: 9
+2023-05-07 15:54:19,690:INFO: Epoch: 27 - loss: 0.0271790678 - test_loss: 0.1758210875
+2023-05-07 15:54:19,690:INFO: Early Stop Left: 8
+2023-05-07 15:54:28,069:INFO: Epoch: 28 - loss: 0.0240179731 - test_loss: 0.1740545543
+2023-05-07 15:54:28,069:INFO: Early Stop Left: 7
+2023-05-07 15:54:36,442:INFO: Epoch: 29 - loss: 0.0213434826 - test_loss: 0.1776355461
+2023-05-07 15:54:36,442:INFO: Early Stop Left: 6
+2023-05-07 15:54:45,039:INFO: Epoch: 30 - loss: 0.0193322684 - test_loss: 0.1785370182
+2023-05-07 15:54:45,039:INFO: Early Stop Left: 5
+2023-05-07 15:54:54,033:INFO: Epoch: 31 - loss: 0.0177763094 - test_loss: 0.1807324585
+2023-05-07 15:54:54,033:INFO: Early Stop Left: 4
+2023-05-07 15:55:02,629:INFO: Epoch: 32 - loss: 0.0166562806 - test_loss: 0.1824737642
+2023-05-07 15:55:02,630:INFO: Early Stop Left: 3
+2023-05-07 15:55:11,279:INFO: Epoch: 33 - loss: 0.0156285506 - test_loss: 0.1819287280
+2023-05-07 15:55:11,279:INFO: Early Stop Left: 2
+2023-05-07 15:55:20,111:INFO: Epoch: 34 - loss: 0.0149365024 - test_loss: 0.1796517261
+2023-05-07 15:55:20,111:INFO: Early Stop Left: 1
+2023-05-07 15:55:28,611:INFO: Epoch: 35 - loss: 0.0143531640 - test_loss: 0.1867154124
+2023-05-07 15:55:28,611:INFO: Early Stop Left: 0
+2023-05-07 15:55:28,611:INFO: -------- Early Stop! --------
