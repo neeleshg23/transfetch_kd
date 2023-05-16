@@ -39,39 +39,40 @@ mkdir -p $OUTPUT_ROOT/$VERSION_TCH/train
 mkdir -p $OUTPUT_ROOT/$VERSION_STU/train
 
 for app1 in ${app_list[*]}; do
-    echo $app1
+    echo "Processing: " $app1
     file_path=$LoadTrace_ROOT/${app1}
 
-    # Decompress the .txt.xz file
+    echo "Decompressing file: " $file_path
     xz -d -k $file_path
 
     base_filename=${app1%.txt.xz}
     decompressed_file_path=$LoadTrace_ROOT/$base_filename.txt
 
-    # Split the decompressed file into NUM_TCH parts
+    echo "Splitting the decompressed file into NUM_TCH parts"
     lines=$(wc -l <$decompressed_file_path)
     lines_per_part=$((lines / NUM_TCH))
     split -l $lines_per_part --numeric-suffixes $decompressed_file_path ${LoadTrace_ROOT}/${base_filename}_part_ --additional-suffix=.txt
 
-    # Split the trace file into NUM_TCH parts and train teacher models on each part
     for part in $(seq 1 $NUM_TCH); do
         split_file_path="${LoadTrace_ROOT}/${base_filename}_part_$(printf "%02d" $((part - 1))).txt"
         split_file_compressed="${split_file_path}.xz"
+        echo "Compressing part file: " $split_file_path
         xz -k -f $split_file_path
 
         tch_model_path=$OUTPUT_ROOT/$VERSION_TCH/train/${base_filename}_$(printf "%02d" $part)_of_$(printf "%02d" $NUM_TCH).model.pth
+        echo "Training teacher model with file: " $split_file_compressed
         python train_tch.py $MODEL $split_file_compressed $tch_model_path $TRAIN_WARM $TRAIN_TOTAL $SKIP
 
-        # Remove the compressed part file after training
+        echo "Removing compressed part file: " $split_file_compressed
         rm $split_file_compressed
     done
 
-    # Remove the decompressed file and the parts
+    echo "Removing decompressed file and parts"
     rm $decompressed_file_path
     rm ${LoadTrace_ROOT}/${base_filename}_part_*
 
     # stu_model_path=$OUTPUT_ROOT/$VERSION_STU/train/${app1}.model.pth
-    # python train_stu.py $MODEL $file_path $tch_model_path $stu_model_path $TRAIN_WARM $TRAIN_TOTAL $SKIP
+    # python train_stu.py $MODEL $NUM_TCH $file_path $tch_model_path $stu_model_path $TRAIN_WARM $TRAIN_TOTAL $SKIP
 
     echo "done for app "$app1
 done

@@ -125,6 +125,7 @@ def page_list_norm(page_list,current_page):
 def preprocessing(data):
     print("preprocessing with context")
     df=pd.DataFrame(data)
+    print(df.head())
     df.columns=["id", "cycle", "addr", "ip", "hit"]
     df['raw']=df['addr']
     df['block_address'] = [x>>BLOCK_BITS for x in df['raw']]
